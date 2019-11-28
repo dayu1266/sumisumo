@@ -29,7 +29,6 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            player = new Player(this, new Vector2(100.0f));
             Camera.LookAt(player.pos.X);
         }
 
