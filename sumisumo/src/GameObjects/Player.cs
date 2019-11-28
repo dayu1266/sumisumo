@@ -15,7 +15,6 @@ namespace sumisumo
         }
 
         const float WalkSpeed    = 3f;   // 歩きの速度
-        const float JumpPower    = 13f;  // ジャンプ力
         const float Gravity      = 0.6f; // 重力
         const float MaxFallSpeed = 12f;  // 最大落下速度
 
@@ -55,12 +54,12 @@ namespace sumisumo
         // 入力を受けての処理
         void HandleInput()
         {
-            if (Input.GetButton(DX.PAD_INPUT_4))
+            if (Input.GetButton(DX.PAD_INPUT_LEFT))
             { // 左が押されてたら、速度を左へ
                 velocity.X = -WalkSpeed;
                 direction = Direction.Left; // 左向きにする
             }
-            else if (Input.GetButton(DX.PAD_INPUT_6))
+            else if (Input.GetButton(DX.PAD_INPUT_RIGHT))
             { // 右が押されてたら、速度を右へ
                 velocity.X = WalkSpeed;
                 direction = Direction.Right; // 右向きにする
@@ -70,17 +69,14 @@ namespace sumisumo
                 velocity.X = 0;
             }
 
-            // 歩き状態 かつ Bボタンが押されたら ジャンプする
-            if (state == State.Walk && Input.GetButtonDown(DX.PAD_INPUT_10))
+            if (Input.GetButtonDown(DX.PAD_INPUT_UP))
             {
-                velocity.Y -= JumpPower; // 縦速度を上方向に
-                state = State.Jump; // 状態をジャンプに
+                FloorUp();
             }
 
-            // ジャンプ中 かつ 上昇中 かつ ジャンプボタンが離されたら
-            if (state == State.Jump && velocity.Y < 0 && !Input.GetButton(DX.PAD_INPUT_10))
+            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN))
             {
-                velocity.Y = 0; // 上昇を中止
+                FloorDown();
             }
         }
 
@@ -195,6 +191,15 @@ namespace sumisumo
         {
             isDead = true;
             playScene.state = PlayScene.State.PlayerDied;
+        }
+
+        public void FloorUp()
+        {
+            pos.Y -= 240;
+        }
+        public void FloorDown()
+        {
+            pos.Y += 120;
         }
     }
 }

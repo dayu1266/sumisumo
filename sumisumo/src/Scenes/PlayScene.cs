@@ -29,7 +29,6 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            player = new Player(this, new Vector2(100.0f));
             Camera.LookAt(player.pos.X);
         }
 
@@ -44,7 +43,7 @@ namespace sumisumo
             if (isPausing)
             {
                 // STARTボタン（Wキー）が押されたら再開
-                if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+                if (Input.GetButtonDown(DX.PAD_INPUT_W))
                 {
                     isPausing = false;
                 }
@@ -101,7 +100,7 @@ namespace sumisumo
             }
 
             // STARTボタン（Wキー）が押されたらポーズ
-            if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+            if (Input.GetButtonDown(DX.PAD_INPUT_W))
             {
                 isPausing = true;
             }

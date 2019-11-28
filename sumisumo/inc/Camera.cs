@@ -31,11 +31,12 @@ namespace sumisumo
         /// <param name="worldX">左端のx座標</param>
         /// <param name="worldY">上端のy座標</param>
         /// <param name="handle">画像ハンドル</param>
-        /// <param name="flip">左右反転するならtrue, しないならfalse（反転しない場合は省略可）</param>
+        /// <param name="flip">左右反転するならtrue, しないならfalse（反転しない場合は省略可）
+        /// </param>
         public static void DrawGraph(float worldX, float worldY, int handle, bool flip = false)
         {
-            if (flip) DX.DrawTurnGraphF(worldX - cameraPos.X, worldY - cameraPos.Y, handle,DX.TRUE);
-            else DX.DrawGraphF(worldX - cameraPos.X, worldY - cameraPos.Y, handle,DX.TRUE);
+            if (flip) DX.DrawTurnGraphF(worldX - cameraPos.X, worldY - cameraPos.Y, handle, DX.TRUE);
+            else DX.DrawGraphF(worldX - cameraPos.X, worldY - cameraPos.Y, handle, DX.TRUE);
         }
 
         /// <summary>
