@@ -36,9 +36,9 @@ namespace sumisumo
 
             // ウィンドウのタイトル
             #if DEBUG
-            DX.SetWindowText("sumisumo（デバッグ）");
+            DX.SetWindowText("Surusuri（デバッグ）");
             #else
-            DX.SetWindowText("sumisumo");
+            DX.SetWindowText("Surusuri");
             #endif
 
             DX.SetGraphMode((int)Screen.Size.X, (int)Screen.Size.Y, 32);     // ウィンドウサイズ（画面解像度）の指定
