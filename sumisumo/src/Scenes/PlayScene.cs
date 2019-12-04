@@ -11,6 +11,7 @@ namespace sumisumo
         public enum State
         {
             Active, // 通常時
+            OnAlert, //警戒中
             PlayerDied, // プレイヤーが死んだとき
         }
 
