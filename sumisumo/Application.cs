@@ -35,7 +35,7 @@ namespace sumisumo
             DX.SetWaitVSyncFlag(DX.GetRefreshRate() == TargetFPS ? DX.TRUE : DX.FALSE);
 
             // ウィンドウのタイトル
-            #if DEBUG
+#if DEBUG
             DX.SetWindowText("Surusuri（デバッグ）");
             #else
             DX.SetWindowText("Surusuri");

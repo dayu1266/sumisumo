@@ -195,11 +195,11 @@ namespace sumisumo
 
         public void FloorUp()
         {
-            pos.Y -= 240;
+            pos.Y -= 280;
         }
         public void FloorDown()
         {
-            pos.Y += 120;
+            pos.Y += 180;
         }
     }
 }
