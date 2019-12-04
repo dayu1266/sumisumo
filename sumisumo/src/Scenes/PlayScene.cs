@@ -11,6 +11,7 @@ namespace sumisumo
         public enum State
         {
             Active, // 通常時
+            OnAlert, //警戒中
             PlayerDied, // プレイヤーが死んだとき
         }
 
@@ -43,7 +44,7 @@ namespace sumisumo
             if (isPausing)
             {
                 // STARTボタン（Wキー）が押されたら再開
-                if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+                if (Input.GetButtonDown(DX.PAD_INPUT_W))
                 {
                     isPausing = false;
                 }
@@ -100,7 +101,7 @@ namespace sumisumo
             }
 
             // STARTボタン（Wキー）が押されたらポーズ
-            if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+            if (Input.GetButtonDown(DX.PAD_INPUT_W))
             {
                 isPausing = true;
             }

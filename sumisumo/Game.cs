@@ -18,10 +18,12 @@ namespace sumisumo
         public void Update()
         {
             Input.Update();
+
             if (Input.GetButtonDown(DX.PAD_INPUT_9))
             {
                 DX.DxLib_End();
             }
+
             scene.Update();
         }
 
