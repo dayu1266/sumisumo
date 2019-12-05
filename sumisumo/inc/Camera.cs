@@ -20,9 +20,10 @@ namespace sumisumo
         public static Vector2 cameraPos;
 
         // 指定されたワールド座標が画面の中心に来るように、カメラの位置を変更する
-        public static void LookAt(float targetX)
+        public static void LookAt(float targetX, float targetY)
         {
             cameraPos.X = targetX - Screen.Size.X / 2;
+            cameraPos.Y = targetY - Screen.Size.Y / 2;
         }
 
         /// <summary>

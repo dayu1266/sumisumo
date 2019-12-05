@@ -32,7 +32,7 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            Camera.LookAt(player.pos.X);
+            Camera.LookAt(player.pos.X,player.pos.Y);
         }
 
         public override void Init()
@@ -89,7 +89,7 @@ namespace sumisumo
             // 不要となったオブジェクトを除去する
             gameObjects.RemoveAll(go => go.isDead);
 
-            Camera.LookAt(player.pos.X);
+            Camera.LookAt(player.pos.X,player.pos.Y);
 
             // プレイヤーがゴールしたときの処理
             if (state != State.PlayerDied && isGoal)
