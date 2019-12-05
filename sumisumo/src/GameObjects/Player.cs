@@ -22,6 +22,10 @@ namespace sumisumo
         State state = State.Walk;        // 現在の状態
         Direction direction = Direction.Right; // 向いている方向
 
+        int floor = 1;      // 今いる階層
+        int floorMax = 3;   // 最上層
+        int fllorMin = 1;   // 最下層
+
 
         public Player(PlayScene playScene, Vector2 pos) : base(playScene)
         {
@@ -69,12 +73,12 @@ namespace sumisumo
                 velocity.X = 0;
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+            if (Input.GetButtonDown(DX.PAD_INPUT_UP) && floor < 3)
             {
                 FloorUp();
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN))
+            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN) && floor > 1)
             {
                 FloorDown();
             }
@@ -196,10 +200,12 @@ namespace sumisumo
         public void FloorUp()
         {
             pos.Y -= 280;
+            floor++;
         }
         public void FloorDown()
         {
             pos.Y += 180;
+            floor--;
         }
     }
 }
