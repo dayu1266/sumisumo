@@ -75,6 +75,9 @@
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
     <Compile Include="src\GameObjects\Player.cs" />
+    <Compile Include="src\GameObjects\ResultCursor.cs" />
+    <Compile Include="src\Scenes\GameClearScene.cs" />
+    <Compile Include="src\Scenes\GameOverScene.cs" />
     <Compile Include="src\Scenes\LoadScene.cs" />
     <Compile Include="src\Scenes\PlayScene.cs" />
     <Compile Include="src\Scenes\ResultScene.cs" />
@@ -107,6 +110,27 @@
     <Content Include="lib\DxLibW.dll" />
     <Content Include="lib\DxLibW_x64.dll" />
     <Content Include="lib\DxLibWDotNet.dll" />
+    <Content Include="res\Image\background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\background1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\cursor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\goMain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\nextStage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\player.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\retry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="res\Image\test_mapchip.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
