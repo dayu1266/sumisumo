@@ -37,7 +37,7 @@ namespace sumisumo
 
         public override void Init()
         {
-
+            
         }
 
         public override void Update()
@@ -52,6 +52,8 @@ namespace sumisumo
                 }
                 return; // Update()を抜ける
             }
+
+            
 
             // 全オブジェクトの更新
             int gameObjectsCount = gameObjects.Count; // ループ前の個数を取得しておく
