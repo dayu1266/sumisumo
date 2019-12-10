@@ -37,7 +37,7 @@ namespace sumisumo
         }
         public static void BgmPlay(string handle)
         {
-            DX.PlayMusic(handle, DX.DX_PLAYTYPE_LOOP);
+            DX.PlayMusic(handle, DX.DX_PLAYTYPE_BACK);
         }
 
         public static void SePlay(int handle)

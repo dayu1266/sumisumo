@@ -12,12 +12,10 @@ namespace sumisumo
     {
         public override void Init()
         {
-            Sound.BgmPlay(Sound.bgm_nomalBGM);
         }
 
         public override void Update()
         {
-            Sound.BgmPlay(Sound.bgm_nomalBGM);
             if (Input.GetButtonDown(DX.PAD_INPUT_1))
             {
                 Game.ChangeScene(new PlayScene());

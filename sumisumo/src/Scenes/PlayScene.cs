@@ -42,6 +42,8 @@ namespace sumisumo
 
         public override void Update()
         {
+            Sound.BgmPlay(Sound.bgm_nomalBGM);
+
             // ポーズ中の場合
             if (isPausing)
             {
