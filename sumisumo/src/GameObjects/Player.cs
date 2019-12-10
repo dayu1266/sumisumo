@@ -21,7 +21,7 @@ namespace sumisumo
         Vector2 velocity = Vector2.Zero; // 移動速度
         State state = State.Walk;        // 現在の状態
         Direction direction = Direction.Right; // 向いている方向
-        public int curMoney = 0;                // 所持金
+        public int curMoney;                // 所持金
 
         int floor = 1;      // 今いる階層
         int floorMax = 3;   // 最上層
@@ -39,6 +39,7 @@ namespace sumisumo
             hitboxOffsetRight = 20;
             hitboxOffsetTop = 14;
             hitboxOffsetBottom = 10;
+            curMoney = 0;
         }
 
         public override void Update()

@@ -15,11 +15,13 @@ namespace sumisumo
         private int posY = 300; // カーソルのY座標
         public void Update()
         {
+            // 下ボタン入力でカーソルを下に移動
             if(Input.GetButtonDown(DX.PAD_INPUT_DOWN) && !moveflag)
             {
                 moveflag = true;
                 posY = 450;
             }
+            // 上ボタン入力でカーソルを上に移動
             else if(Input.GetButtonDown(DX.PAD_INPUT_UP) && moveflag)
             {
                 moveflag = false;
