@@ -10,7 +10,9 @@ namespace sumisumo
 {
     class TitleScene : Scene
     {
-        public override void Init(){ }          
+        public override void Init()
+        {
+        }
 
         public override void Update()
         {
@@ -18,6 +20,7 @@ namespace sumisumo
             {
                 Game.ChangeScene(new PlayScene());
             }
+
         }
 
         public override void Draw()

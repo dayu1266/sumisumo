@@ -11,6 +11,7 @@ namespace sumisumo
         public override void Init()
         {
             Image.Load();
+            Sound.Load();
             Game.ChangeScene(new TitleScene());
         }
 

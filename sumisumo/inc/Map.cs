@@ -15,8 +15,8 @@ namespace sumisumo
         public const int Brick = 2;    // レンガ
         public const int Floor = 3;    // 下から抜けられる床
 
-        public const int Width = 90;  // マップデータの横のマス数
-        public const int Height = 31;   // マップデータの縦のマス数
+        public const int Width = 80;  // マップデータの横のマス数
+        public const int Height = 40;   // マップデータの縦のマス数
         public const int CellSize = 32; // マップの1マスのピクセル数
 
         PlayScene playScene; // PlaySceneクラスの参照
