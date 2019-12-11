@@ -27,6 +27,7 @@ C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\qimoM
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.exe
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.pdb
+<<<<<<< HEAD
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\sumisumo.exe
@@ -57,3 +58,5 @@ C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoInput_d.dll
 C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoMath2D_d.dll
 C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoMath2D_d.xml
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
+=======
+>>>>>>> 6e0d28aff702939806ba5e18570be34990a5477c
