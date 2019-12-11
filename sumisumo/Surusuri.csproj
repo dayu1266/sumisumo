@@ -69,6 +69,7 @@
     <Compile Include="inc\Image.cs" />
     <Compile Include="inc\Map.cs" />
     <Compile Include="inc\Screen.cs" />
+    <Compile Include="inc\Sound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Enums\Direction.cs" />
     <Compile Include="src\Enums\GameDifficult.cs" />
@@ -143,6 +144,15 @@
     <Content Include="res\Image\test_zentaman.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="res\Sound\BGM\nomalBGM.mp3" />
+    <Content Include="res\Sound\BGM\warningBGM.mp3" />
+    <Content Include="res\Sound\SE\alarm.mp3" />
+    <Content Include="res\Sound\SE\gameClear.mp3" />
+    <Content Include="res\Sound\SE\gameOver.mp3" />
+    <Content Include="res\Sound\SE\scream_men.mp3" />
+    <Content Include="res\Sound\SE\scream_woman.mp3" />
+    <Content Include="res\Sound\SE\surinuke.mp3" />
+    <Content Include="res\Sound\SE\whistle.mp3" />
     <Reference Include="qimoMath2D" Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
       <HintPath>lib\qimoMath2D.dll</HintPath>
     </Reference>
