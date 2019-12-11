@@ -115,15 +115,6 @@ namespace sumisumo
 
         public override void OnCollision(GameObject other)
         {
-            if (other is Player) // 逃走中に一般人にぶつかったときの処理
-            {
-                Die(); // 死亡処理
-            }
-        }
-
-        public void Die()
-        {
-            isDead = true;
         }
 
         public override void Draw()

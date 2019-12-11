@@ -73,14 +73,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Enums\Direction.cs" />
     <Compile Include="src\Enums\GameDifficult.cs" />
-    <Compile Include="src\GameObjects\Enemy\guardman.cs" />
+    <Compile Include="src\GameObjects\Enemy\Guardman.cs" />
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
     <Compile Include="src\GameObjects\Enemy\People.cs" />
     <Compile Include="src\GameObjects\Gimmick\DownStairs.cs" />
     <Compile Include="src\GameObjects\Gimmick\UpStairs.cs" />
     <Compile Include="src\GameObjects\Player.cs" />
-    <Compile Include="src\GameObjects\ResultCursor.cs" />
+    <Compile Include="src\GameObjects\Others\ResultCursor.cs" />
     <Compile Include="src\Scenes\GameClearScene.cs" />
     <Compile Include="src\Scenes\GameOverScene.cs" />
     <Compile Include="src\Scenes\LoadScene.cs" />
