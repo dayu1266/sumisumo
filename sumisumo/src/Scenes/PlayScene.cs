@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System;
 using System.Collections.Generic;
 using DxLibDLL;
 using QimOLib;
@@ -32,12 +33,12 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            Camera.LookAt(player.pos.X,player.pos.Y);
+            Camera.LookAt(player.pos.X, player.pos.Y);
         }
 
         public override void Init()
         {
-            
+
         }
 
         public override void Update()
@@ -55,7 +56,7 @@ namespace sumisumo
                 return; // Update()を抜ける
             }
 
-            
+
 
             // 全オブジェクトの更新
             int gameObjectsCount = gameObjects.Count; // ループ前の個数を取得しておく
@@ -93,7 +94,7 @@ namespace sumisumo
             // 不要となったオブジェクトを除去する
             gameObjects.RemoveAll(go => go.isDead);
 
-            Camera.LookAt(player.pos.X,player.pos.Y);
+            Camera.LookAt(player.pos.X, player.pos.Y);
 
             // プレイヤーがゴールしたときの処理
             if (state != State.PlayerDied && isGoal)
@@ -124,8 +125,20 @@ namespace sumisumo
             DX.DrawGraph(0, 0, Image.play_bg, 0);
             // マップの描画
             map.DrawTerrain();
-            DX.DrawString(1100, 30, player.curMoney + " / " + targetAmout.ToString(), DX.GetColor(255, 0, 0));
 
+            for (int i = 0; i < player.curMoney.ToString().Length; i++)
+            {
+                DX.DrawRotaGraph(1000 + (16 * i), 32, 0.3f, 0, Image.number[player.curMoney.ToString()[i] - '0'], 1);
+            }
+            DX.DrawString(1060, 26, "/", DX.GetColor(0, 0, 0));
+            for (int i = 0; i < targetAmout.ToString().Length; i++)
+            {
+                DX.DrawRotaGraph(1080 + (16 * i), 32, 0.3f, 0, Image.number[targetAmout.ToString()[i] - '0'], 1);
+            }
+            for (int i = 0; i < player.hp; i++)
+            {
+                DX.DrawRotaGraph(32 + (i * 48), 20, 2, 0, Image.heart, 1);
+            }
             // 全オブジェクトの描画
             foreach (GameObject go in gameObjects)
             {
