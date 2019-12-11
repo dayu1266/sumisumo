@@ -111,6 +111,7 @@ namespace sumisumo
                 playScene.gameObjects.Add(player);
                 playScene.player = player;
             }
+<<<<<<< HEAD
             //else if (objectID == 1) // しいたけ
             //{
             //    playScene.gameObjects.Add(new Shiitake(playScene, new Vector2(spawnX, spawnY)));
@@ -124,6 +125,21 @@ namespace sumisumo
             //    DX.DrawGraphF(spawnX, spawnY, Image.downStairs, 1);
             //}
 
+=======
+            else if (objectID == 1) // しいたけ
+            {
+                playScene.gameObjects.Add(new Shiitake(playScene, new Vector2(spawnX, spawnY)));
+            }
+            else if (objectID == 3)
+            {
+                playScene.gameObjects.Add(new UpStairs(playScene, new Vector2(spawnX, spawnY)));
+            }
+            else if (objectID == 4)
+            {
+                playScene.gameObjects.Add(new DownStairs(playScene, new Vector2(spawnX, spawnY)));
+            }
+            // 新しい種類のオブジェクトを作ったら、ここに生成処理を追加してください
+>>>>>>> 7685e5dd8697f24bd88817f6a560fc2479764232
             else
             {
                 Debug.Assert(false, "オブジェクトID" + objectID + "番の生成処理は未実装です。");

@@ -76,8 +76,12 @@
     <Compile Include="src\GameObjects\Enemy\guardman.cs" />
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
+<<<<<<< HEAD
+    <Compile Include="src\GameObjects\Enemy\People.cs" />
+=======
     <Compile Include="src\GameObjects\Gimmick\DownStairs.cs" />
     <Compile Include="src\GameObjects\Gimmick\UpStairs.cs" />
+>>>>>>> 197c760301c6879362347f9e85edc246d1d9948d
     <Compile Include="src\GameObjects\Player.cs" />
     <Compile Include="src\GameObjects\ResultCursor.cs" />
     <Compile Include="src\Scenes\GameClearScene.cs" />
