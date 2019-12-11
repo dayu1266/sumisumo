@@ -34,6 +34,10 @@ namespace sumisumo
         public override void OnCollision(GameObject other)
         {
         }
+
+        public override void OnView(GameObject other)
+        {
+        }
     }
 }
 

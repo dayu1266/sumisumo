@@ -19,6 +19,11 @@ namespace sumisumo
         protected int hitboxOffsetTop    = 0; // 当たり判定の上端のオフセット
         protected int hitboxOffsetBottom = 0; // 当たり判定の下端のオフセット
 
+        protected int viewTop    = 0; // 視野の上端
+        protected int viewBottom = 0; // 視野の下端
+        protected int viewLeft   = 0; // 視野の左端
+        protected int viewRight  = 0; // 視野の右端
+
         // コンストラクタ
         public GameObject(PlayScene playScene)
         {
@@ -73,6 +78,44 @@ namespace sumisumo
             pos.Y = bottom + hitboxOffsetBottom - imageHeight;
         }
 
+        public virtual int GetViewTop()
+        {
+            return (int)pos.Y + viewTop;
+        }
+
+        public virtual int GetViewBottom()
+        {
+            return (int)pos.Y + imageHeight - viewBottom;
+        }
+
+        public virtual int GetViewRight()
+        {
+            return (int)pos.X + imageWidth - viewRight;
+        }
+
+        public virtual int GetViewLeft()
+        {
+            return (int)pos.X + viewLeft;
+        }
+
+        public virtual void SetViewRight(int value)
+        {
+            viewRight = value;
+        }
+
+        public virtual void SetViewLeft(int value)
+        {
+            viewLeft = value;
+        }
+
+        public virtual void ViewDirectionChange()
+        {
+            int tmpL = viewLeft;
+            int tmpR = viewRight;
+            SetViewLeft(tmpR);
+            SetViewRight(tmpL);
+        }
+
         // 更新処理
         public abstract void Update();
 
@@ -86,8 +129,18 @@ namespace sumisumo
             Camera.DrawLineBox(GetLeft(), GetTop(), GetRight(), GetBottom(), DX.GetColor(255, 0, 0));
         }
 
+        // 当たり判定を描画（デバッグ用）
+        public void DrawView()
+        {
+            // 四角形を描画
+            Camera.DrawLineBox(GetViewLeft(), GetViewTop(), GetViewRight(), GetViewBottom(), DX.GetColor(0, 0, 255));
+        }
+
         // 他のオブジェクトと衝突したときに呼ばれる
         public abstract void OnCollision(GameObject other);
+
+        // ほかのオブジェクトが視界に入った時呼ばれる
+        public abstract void OnView(GameObject other);
 
         // 画面内に映っているか？
         public virtual bool IsVisible()

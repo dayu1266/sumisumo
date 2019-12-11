@@ -36,8 +36,8 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            gameObjects.Add(new People(this, new Vector2(200, 400)));
-            gameObjects.Add(new Guardman(this, new Vector2(400, 400)));
+            gameObjects.Add(new People(this, new Vector2(600, 400)));
+            gameObjects.Add(new Guardman(this, new Vector2(600, 650)));
             Camera.LookAt(player.pos.X, player.pos.Y);
         }
 
@@ -166,14 +166,18 @@ namespace sumisumo
                 DX.SetDrawBlendMode(DX.DX_BLENDMODE_ALPHA, 255);
             }
 
-            // Debugのみ実行される
-#if DEBUG
+            #if DEBUG // Debugのみ実行される
             // 当たり判定のデバッグ表示
             foreach (GameObject go in gameObjects)
             {
                 go.DrawHitBox();
             }
-#endif
+            // 視野のデバッグ表示
+            foreach (GameObject go in gameObjects)
+            {
+                go.DrawView();
+            }
+            #endif
         }
     }
 }

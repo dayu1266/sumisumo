@@ -213,6 +213,11 @@ namespace sumisumo
             //}
         }
 
+
+        public override void OnView(GameObject other)
+        {
+        }
+
         // 死亡処理
         public void Die()
         {

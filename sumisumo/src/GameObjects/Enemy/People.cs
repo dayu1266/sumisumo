@@ -14,13 +14,15 @@ namespace sumisumo
         const float WalkSpeed = 3f;      // 歩きの速度
         const float MaxFallSpeed = 12f;  // 最大落下速度
         const int initialHp = 1;         // 一般人のHP
-        const int initialAmount = 100;    // 移動量のベース
+        const int initialAmount = 200;    // 移動量のベース
         const int initialdontMoveFream = 3 * 60;    // 停止フレーム
+        const int View = 130;            // 視野
 
         float Amount;
         float dontMoveFream;
         public int hp;
         int randMove;
+        int changecount;
 
         Vector2 velocity;        // 移動速度
         Direction MoveDirection; // 移動方向
@@ -32,10 +34,16 @@ namespace sumisumo
 
             imageWidth = 60;
             imageHeight = 140;
+
             hitboxOffsetLeft = 17;
             hitboxOffsetRight = 17;
             hitboxOffsetTop = 9;
             hitboxOffsetBottom = 3;
+
+            viewTop = -50;
+            viewBottom = 3;
+            viewLeft = 130;
+            viewRight = 17;
 
             hp = initialHp;
             Amount = initialAmount;
@@ -59,12 +67,23 @@ namespace sumisumo
                 dontMoveFream = initialdontMoveFream;
 
                 // ランダムで移動方向を決定
+                int tmp = randMove;
                 randMove = QimOLib.Random.Range(1, 3);
+                if (changecount == 0)
+                {
+                    randMove = 2;
+                }
+                if(tmp != randMove && changecount != 0)
+                {
+                    ViewDirectionChange();
+                }
 
                 // 移動量を決定
                 int randAmount = QimOLib.Random.Range(1, 4);
                 Amount = initialAmount * randAmount;
             }
+
+            changecount++;
 
             // Amount が0以上なら動く
             if (Amount > 0)
@@ -151,6 +170,10 @@ namespace sumisumo
         }
 
         public override void OnCollision(GameObject other)
+        {
+        }
+
+        public override void OnView(GameObject other)
         {
         }
 
