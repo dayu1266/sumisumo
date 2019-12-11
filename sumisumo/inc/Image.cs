@@ -15,7 +15,9 @@ namespace sumisumo
         public static int nextStage;                     // 次のステージへ
         public static int cursor;                        // カーソル
         public static int[] number = new int[10];        // 数字のフォント
-        public static int heart;                       // ハート
+        public static int heart;                         // ハート
+        public static int downStairs;                    // 下り階段
+        public static int upStairs;                      // 上り階段
 
         public static void Load()
         {
@@ -31,6 +33,8 @@ namespace sumisumo
             cursor = DX.LoadGraph("res/Image/cursor.png");
             DX.LoadDivGraph("res/Image/number.png", number.Length, 10, 1, 64, 64, number);
             heart = DX.LoadGraph("res/Image/heart.png");
+            downStairs = DX.LoadGraph("res/Image/downstairs.png");
+            upStairs = DX.LoadGraph("res/Image/upstairs.png");
         }
     }
 }
