@@ -65,7 +65,11 @@ namespace sumisumo
         // 入力を受けての処理
         void HandleInput()
         {
-            if (Input.GetButton(DX.PAD_INPUT_LEFT))
+            if (Input.GetButton(DX.PAD_INPUT_LEFT) && Input.GetButton(DX.PAD_INPUT_RIGHT))
+            { // 左が押されてたら、速度を左へ
+                velocity.X = 0;
+            }
+            else if (Input.GetButton(DX.PAD_INPUT_LEFT))
             { // 左が押されてたら、速度を左へ
                 velocity.X = -WalkSpeed;
                 direction = Direction.Left; // 左向きにする

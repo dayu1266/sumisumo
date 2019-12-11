@@ -73,9 +73,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Enums\Direction.cs" />
     <Compile Include="src\Enums\GameDifficult.cs" />
+    <Compile Include="src\GameObjects\Enemy\guardman.cs" />
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
+<<<<<<< HEAD
     <Compile Include="src\GameObjects\Enemy\People.cs" />
+=======
+    <Compile Include="src\GameObjects\Gimmick\DownStairs.cs" />
+    <Compile Include="src\GameObjects\Gimmick\UpStairs.cs" />
+>>>>>>> 197c760301c6879362347f9e85edc246d1d9948d
     <Compile Include="src\GameObjects\Player.cs" />
     <Compile Include="src\GameObjects\ResultCursor.cs" />
     <Compile Include="src\Scenes\GameClearScene.cs" />
@@ -121,10 +127,22 @@
     <Content Include="res\Image\cursor.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="res\Image\downstairs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="res\Image\goMain.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="res\Image\guardman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\heart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="res\Image\nextStage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\number.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="res\Image\player.png">
@@ -143,6 +161,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="res\Image\test_zentaman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="res\Image\upstairs.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="res\Sound\BGM\nomalBGM.mp3" />
