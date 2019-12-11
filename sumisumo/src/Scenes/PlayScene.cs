@@ -33,9 +33,14 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
+<<<<<<< HEAD
             Camera.LookAt(player.pos.X, player.pos.Y);
 
             gameObjects.Add(new People(this, new Vector2(200, 600)));
+=======
+            Camera.LookAt(player.pos.X,player.pos.Y);
+            People people = new People(this,new Vector2(player.pos.X,player.pos.Y));
+>>>>>>> 2766a67d3eb0d24510435020e614c2a22df3646f
         }
 
 
@@ -125,15 +130,8 @@ namespace sumisumo
             // マップの描画
             map.DrawTerrain();
 
-            for (int i = 0; i < player.curMoney.ToString().Length; i++)
-            {
-                DX.DrawRotaGraph(1000 + (16 * i), 32, 0.3f, 0, Image.number[player.curMoney.ToString()[i] - '0'], 1);
-            }
-            DX.DrawString(1060, 26, "/", DX.GetColor(0, 0, 0));
-            for (int i = 0; i < targetAmout.ToString().Length; i++)
-            {
-                DX.DrawRotaGraph(1080 + (16 * i), 32, 0.3f, 0, Image.number[targetAmout.ToString()[i] - '0'], 1);
-            }
+          
+            
             for (int i = 0; i < player.hp; i++)
             {
                 DX.DrawRotaGraph(32 + (i * 48), 20, 2, 0, Image.heart, 1);
@@ -143,6 +141,16 @@ namespace sumisumo
             {
                 go.Draw();
             }
+            string money = player.curMoney.ToString("000000");
+            for (int i = 0; i < money.Length; i++)
+            {
+                DX.DrawRotaGraph(1140 + (16 * i), 32, 1.0f, 0, Image.number[money[i] - '0'], 1);
+            }
+            //DX.DrawString(1060, 26, "/", DX.GetColor(0, 0, 0));
+            //for (int i = 0; i < targetAmout.ToString().Length; i++)
+            //{
+            //    DX.DrawRotaGraph(1080 + (16 * i), 32, 0.3f, 0, Image.number[targetAmout.ToString()[i] - '0'], 1);
+            //}
 
             // ポーズ中の半透明のスクリーンの描画
             if (isPausing)
