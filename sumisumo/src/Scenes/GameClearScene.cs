@@ -10,8 +10,7 @@ namespace sumisumo
 {
     public class GameClearScene : Scene
     {
-        ResultCursor resultCursor = new ResultCursor();
-        bool flag;
+        bool flag; // カーソルの位置のフラグ
         public override void Init()
         {
         }
@@ -19,7 +18,7 @@ namespace sumisumo
         public override void Update()
         {
             resultCursor.Update();
-            flag = resultCursor.moveflag;
+            flag = resultCursor.moveflag; //フラグの取得
 
             if (Input.GetButtonDown(DX.PAD_INPUT_1) && !flag)
             {
