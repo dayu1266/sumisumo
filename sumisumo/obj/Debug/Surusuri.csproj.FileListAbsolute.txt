@@ -34,7 +34,6 @@ C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\sumisumo.exe
 C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\sumisumo.pdb
 =======
-<<<<<<< HEAD
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background.png
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background1.png
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\cursor.png
@@ -59,7 +58,6 @@ C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surus
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.exe
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.pdb
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
-=======
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background1.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\cursor.png
@@ -115,3 +113,11 @@ C:\surusure\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
 C:\surusure\sumisumo\obj\Debug\sumisumo.exe
 C:\surusure\sumisumo\obj\Debug\sumisumo.pdb
 >>>>>>> a0ac252f6faf6c90a8fd9f3345ca4c88ff85d958
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\background.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\background1.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\cursor.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\goMain.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\nextStage.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\player.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\retry.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoMath2D_d.xml
