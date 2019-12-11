@@ -18,6 +18,8 @@ namespace sumisumo
         const float Gravity = 0.6f; // 重力
         const float MaxFallSpeed = 12f;  // 最大落下速度
 
+        const int initialHp = 3;
+
         Vector2 velocity = Vector2.Zero; // 移動速度
         State state = State.Walk;        // 現在の状態
         Direction direction = Direction.Right; // 向いている方向
@@ -27,7 +29,8 @@ namespace sumisumo
         int floorMax = 3;   // 最上層
         int fllorMin = 1;   // 最下層
 
-
+        public int hp = 3;
+        
         public Player(PlayScene playScene, Vector2 pos) : base(playScene)
         {
             this.pos.X = pos.X;
@@ -40,6 +43,8 @@ namespace sumisumo
             hitboxOffsetTop = 14;
             hitboxOffsetBottom = 10;
             curMoney = 0;
+
+            hp = initialHp;
         }
 
         public override void Update()
