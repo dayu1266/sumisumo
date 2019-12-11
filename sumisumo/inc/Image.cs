@@ -14,6 +14,7 @@ namespace sumisumo
         public static int retry;                         // リトライ
         public static int nextStage;                     // 次のステージへ
         public static int cursor;                        // カーソル
+        public static int[] number = new int[10];        // 数字のフォント
 
         public static void Load()
         {
@@ -27,6 +28,7 @@ namespace sumisumo
             nextStage = DX.LoadGraph("res/Image/nextStage.png");
             retry = DX.LoadGraph("res/Image/retry.png");
             cursor = DX.LoadGraph("res/Image/cursor.png");
+            DX.LoadDivGraph("res/Image/number.png", number.Length, 10, 1, 64, 64, number);
         }
     }
 }
