@@ -37,10 +37,10 @@ namespace sumisumo
 
         public override void Update()
         {
-            /*// まず横に動かす
+            // まず横に動かす
             MoveX();
             // 次に縦に動かす
-            MoveY();*/
+            MoveY();
         }
 
         void MoveX()
@@ -128,7 +128,7 @@ namespace sumisumo
 
         public override void Draw()
         {
-            Camera.DrawGraph(pos.X,pos.Y, Image.test_shiitake);
+            Camera.DrawGraph(pos.X,pos.Y, Image.people);
         }
     }
 }

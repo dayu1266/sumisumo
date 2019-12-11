@@ -33,12 +33,9 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-<<<<<<< HEAD
-            Camera.LookAt(player.pos.X,player.pos.Y);
-            People people = new People(this,new Vector2(player.pos.X,player.pos.Y));
-=======
             Camera.LookAt(player.pos.X, player.pos.Y);
->>>>>>> 197c760301c6879362347f9e85edc246d1d9948d
+
+            gameObjects.Add(new People(this, new Vector2(200, 600)));
         }
 
 
@@ -49,8 +46,6 @@ namespace sumisumo
 
         public override void Update()
         {
-            Sound.BgmPlay(Sound.bgm_nomalBGM);
-
             // ポーズ中の場合
             if (isPausing)
             {
@@ -61,8 +56,6 @@ namespace sumisumo
                 }
                 return; // Update()を抜ける
             }
-
-
 
             // 全オブジェクトの更新
             int gameObjectsCount = gameObjects.Count; // ループ前の個数を取得しておく
