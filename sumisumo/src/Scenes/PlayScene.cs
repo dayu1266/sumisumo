@@ -24,7 +24,9 @@ namespace sumisumo
 
         public State state = State.Active;// PlaySceneの状態
         int timeToGameOver = 120; // ゲームオーバーになるまでの時間（フレーム）
+        public bool isGoal = false; // ゴールしたかどうか
         bool isPausing = false; // ポーズ中かどうか
+        int targetAmout = 1000; // 目標金額
 
         public PlayScene()
         {
@@ -40,6 +42,8 @@ namespace sumisumo
 
         public override void Update()
         {
+            Sound.BgmPlay(Sound.bgm_nomalBGM);
+
             // ポーズ中の場合
             if (isPausing)
             {
@@ -50,6 +54,8 @@ namespace sumisumo
                 }
                 return; // Update()を抜ける
             }
+
+            
 
             // 全オブジェクトの更新
             int gameObjectsCount = gameObjects.Count; // ループ前の個数を取得しておく
@@ -89,6 +95,12 @@ namespace sumisumo
 
             Camera.LookAt(player.pos.X,player.pos.Y);
 
+            // プレイヤーがゴールしたときの処理
+            if (state != State.PlayerDied && isGoal)
+            {
+                Game.ChangeScene(new GameClearScene());// GameClearSceneにする
+            }
+
             // プレイヤーが死んでゲームオーバーに移る直前の状態の処理
             if (state == State.PlayerDied)
             {
@@ -96,7 +108,7 @@ namespace sumisumo
 
                 if (timeToGameOver <= 0) // 0になったら
                 {
-                    Game.ChangeScene(new ResultScene()); // GameOverSceneにする
+                    Game.ChangeScene(new GameOverScene()); // GameOverSceneにする
                 }
             }
 
@@ -109,8 +121,10 @@ namespace sumisumo
 
         public override void Draw()
         {
+            DX.DrawGraph(0, 0, Image.play_bg, 0);
             // マップの描画
             map.DrawTerrain();
+            DX.DrawString(1100, 30, player.curMoney + " / " + targetAmout.ToString(), DX.GetColor(255, 0, 0));
 
             // 全オブジェクトの描画
             foreach (GameObject go in gameObjects)
@@ -131,13 +145,13 @@ namespace sumisumo
             }
 
             // Debugのみ実行される
-            #if DEBUG
+#if DEBUG
             // 当たり判定のデバッグ表示
             foreach (GameObject go in gameObjects)
             {
                 go.DrawHitBox();
             }
-            #endif
+#endif
         }
     }
 }

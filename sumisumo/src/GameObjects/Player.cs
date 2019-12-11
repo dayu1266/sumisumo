@@ -14,13 +14,18 @@ namespace sumisumo
             Jump, // ジャンプ中
         }
 
-        const float WalkSpeed    = 3f;   // 歩きの速度
-        const float Gravity      = 0.6f; // 重力
+        const float WalkSpeed = 6f;   // 歩きの速度
+        const float Gravity = 0.6f; // 重力
         const float MaxFallSpeed = 12f;  // 最大落下速度
 
         Vector2 velocity = Vector2.Zero; // 移動速度
         State state = State.Walk;        // 現在の状態
         Direction direction = Direction.Right; // 向いている方向
+        public int curMoney = 0;                // 所持金
+
+        int floor = 1;      // 今いる階層
+        int floorMax = 3;   // 最上層
+        int fllorMin = 1;   // 最下層
 
 
         public Player(PlayScene playScene, Vector2 pos) : base(playScene)
@@ -28,11 +33,11 @@ namespace sumisumo
             this.pos.X = pos.X;
             this.pos.Y = pos.Y;
 
-            imageWidth         = 60;
-            imageHeight        = 70;
-            hitboxOffsetLeft   = 20;
-            hitboxOffsetRight  = 20;
-            hitboxOffsetTop    = 14;
+            imageWidth = 60;
+            imageHeight = 140;
+            hitboxOffsetLeft = 20;
+            hitboxOffsetRight = 20;
+            hitboxOffsetTop = 14;
             hitboxOffsetBottom = 10;
         }
 
@@ -69,14 +74,19 @@ namespace sumisumo
                 velocity.X = 0;
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_UP))
+            if (Input.GetButtonDown(DX.PAD_INPUT_UP) && floor < 3)
             {
                 FloorUp();
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN))
+            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN) && floor > 1)
             {
                 FloorDown();
+            }
+            //所持金テスト用
+            if (Input.GetButton(DX.PAD_INPUT_1))
+            {
+                curMoney += 10;
             }
         }
 
@@ -165,16 +175,19 @@ namespace sumisumo
             {
                 if (velocity.X == 0) // 移動していない場合
                 {
-                    Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[0], flip);
+                    // Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[0], flip);
+                    Camera.DrawGraph(pos.X, pos.Y, Image.player, flip); // 仮リソース
                 }
                 else // 移動している場合
                 {
-                    Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[5], flip);
+                    //Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[5], flip);
+                    Camera.DrawGraph(pos.X, pos.Y, Image.player, flip); // 仮リソース
                 }
             }
             else if (state == State.Jump) // ジャンプ中の場合
             {
-                Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[14], flip);
+                // Camera.DrawGraph(pos.X, pos.Y, Image.test_zentaman[14], flip);
+                Camera.DrawGraph(pos.X, pos.Y, Image.player, flip); // 仮リソース
             }
         }
 
@@ -184,6 +197,10 @@ namespace sumisumo
             {
                 Die(); // 死亡処理
             }
+            //else if (other is Goal) //ゴールにぶつかったときの処理
+            //{
+            //    IsGoal(); //ゴール処理
+            //}
         }
 
         // 死亡処理
@@ -193,13 +210,28 @@ namespace sumisumo
             playScene.state = PlayScene.State.PlayerDied;
         }
 
+        // ゴール処理
+        public void IsGoal()
+        {
+            if (curMoney > 1000)// 所持金が目標金額を超えていたら
+            {
+                playScene.isGoal = true;
+            }
+            else // 超えていなかったら
+            {
+                // 何もしない
+            }
+        }
+
         public void FloorUp()
         {
             pos.Y -= 280;
+            floor++;
         }
         public void FloorDown()
         {
             pos.Y += 180;
+            floor--;
         }
     }
 }
