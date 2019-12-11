@@ -103,6 +103,14 @@ namespace sumisumo
             {
                 playScene.gameObjects.Add(new Shiitake(playScene, new Vector2(spawnX, spawnY)));
             }
+            else if (objectID == 3)
+            {
+                DX.DrawGraphF(spawnX, spawnY, Image.upStairs, 1);
+            }
+            else if (objectID == 3)
+            {
+                DX.DrawGraphF(spawnX, spawnY, Image.downStairs, 1);
+            }
             // 新しい種類のオブジェクトを作ったら、ここに生成処理を追加してください
             else
             {
