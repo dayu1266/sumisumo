@@ -24,7 +24,6 @@ C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumis
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.pdb
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
 =======
-<<<<<<< HEAD
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background1.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\cursor.png
@@ -49,7 +48,6 @@ C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
 C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
 C:\suru_suri\sumisumo\obj\Debug\sumisumo.exe
 C:\suru_suri\sumisumo\obj\Debug\sumisumo.pdb
-=======
 D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background.png
 D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background1.png
 D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\cursor.png
@@ -76,3 +74,7 @@ D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.exe
 D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.pdb
 >>>>>>> e75ab6c6277f9e6baf3dd677f78a876bd38639b2
 >>>>>>> c74a29567287f84e93a736e2dbf24a70809e61b1
+C:\surusure\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+C:\surusure\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+C:\surusure\sumisumo\obj\Debug\sumisumo.exe
+C:\surusure\sumisumo\obj\Debug\sumisumo.pdb
