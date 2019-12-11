@@ -11,14 +11,19 @@ namespace sumisumo
 {
     public class People : GameObject
     {
-        const float WalkSpeed = 6f;   // 歩きの速度
+        const float WalkSpeed = 3f;      // 歩きの速度
         const float MaxFallSpeed = 12f;  // 最大落下速度
+        const int initialHp = 1;         // 一般人のHP
+        const int initialAmount = 100;    // 移動量のベース
+        const int initialdontMoveFream = 3 * 60;    // 停止フレーム
 
-        const int initialHp = 1;
+        float Amount;
+        float dontMoveFream;
+        public int hp;
+        int randMove;
 
-        Vector2 velocity = Vector2.Zero; // 移動速度
-
-        public int hp = 1;
+        Vector2 velocity;        // 移動速度
+        Direction MoveDirection; // 移動方向
 
         public People(PlayScene playScene, Vector2 pos) : base(playScene)
         {
@@ -30,9 +35,11 @@ namespace sumisumo
             hitboxOffsetLeft = 17;
             hitboxOffsetRight = 17;
             hitboxOffsetTop = 9;
-            hitboxOffsetBottom = 10;
+            hitboxOffsetBottom = 3;
 
             hp = initialHp;
+            Amount = initialAmount;
+            dontMoveFream = 0;
         }
 
         public override void Update()
@@ -45,6 +52,36 @@ namespace sumisumo
 
         void MoveX()
         {
+            if (dontMoveFream <= 0)
+            {
+                // 初期値代入
+                Amount = initialAmount;
+                dontMoveFream = initialdontMoveFream;
+
+                // ランダムで移動方向を決定
+                randMove = QimOLib.Random.Range(1, 3);
+
+                // 移動量を決定
+                int randAmount = QimOLib.Random.Range(1, 4);
+                Amount = initialAmount * randAmount;
+            }
+
+            // Amount が0以上なら動く
+            if (Amount > 0)
+            {
+                velocity.X = WalkSpeed;
+                Amount -= velocity.X;
+                if (randMove == 1)
+                {
+                    velocity.X *= -1;
+                }
+            }
+            else
+            {
+                velocity.X = 0;
+                dontMoveFream--;
+            }
+
             // 横に移動する
             pos.X += velocity.X;
 
@@ -119,7 +156,7 @@ namespace sumisumo
 
         public override void Draw()
         {
-            Camera.DrawGraph(pos.X,pos.Y, Image.people);
+            Camera.DrawGraph(pos.X, pos.Y, Image.people);
         }
     }
 }
