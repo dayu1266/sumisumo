@@ -33,7 +33,9 @@ namespace sumisumo
             // インスタンス生成
             map = new Map(this, "stage1");
             Camera.LookAt(player.pos.X,player.pos.Y);
+            People people = new People(this,new Vector2(player.pos.X,player.pos.Y));
         }
+
 
         public override void Init()
         {

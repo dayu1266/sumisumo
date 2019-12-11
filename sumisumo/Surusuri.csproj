@@ -75,6 +75,7 @@
     <Compile Include="src\Enums\GameDifficult.cs" />
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
+    <Compile Include="src\GameObjects\Enemy\People.cs" />
     <Compile Include="src\GameObjects\Player.cs" />
     <Compile Include="src\GameObjects\ResultCursor.cs" />
     <Compile Include="src\Scenes\GameClearScene.cs" />
