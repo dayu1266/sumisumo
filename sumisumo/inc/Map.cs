@@ -111,6 +111,21 @@ namespace sumisumo
                 playScene.gameObjects.Add(player);
                 playScene.player = player;
             }
+<<<<<<< HEAD
+            else if (objectID == 1) // しいたけ
+            {
+                playScene.gameObjects.Add(new Shiitake(playScene, new Vector2(spawnX, spawnY)));
+            }
+            else if (objectID == 3)
+            {
+                DX.DrawGraphF(spawnX, spawnY, Image.upStairs, 1);
+            }
+            else if (objectID == 3)
+            {
+                DX.DrawGraphF(spawnX, spawnY, Image.downStairs, 1);
+            }
+=======
+>>>>>>> 6e0d28aff702939806ba5e18570be34990a5477c
             // 新しい種類のオブジェクトを作ったら、ここに生成処理を追加してください
             else
             {

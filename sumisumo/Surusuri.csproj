@@ -73,6 +73,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Enums\Direction.cs" />
     <Compile Include="src\Enums\GameDifficult.cs" />
+    <Compile Include="src\GameObjects\Enemy\guardman.cs" />
     <Compile Include="src\GameObjects\Enemy\Shiitakecs.cs" />
     <Compile Include="src\GameObjects\GameObject.cs" />
     <Compile Include="src\GameObjects\Gimmick\DownStairs.cs" />
@@ -128,6 +129,12 @@
     <Content Include="res\Image\goMain.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
+    <Content Include="res\Image\guardman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+=======
+>>>>>>> 6e0d28aff702939806ba5e18570be34990a5477c
     <Content Include="res\Image\heart.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
