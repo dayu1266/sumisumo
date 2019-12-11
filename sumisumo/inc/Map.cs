@@ -93,23 +93,23 @@ namespace sumisumo
             float spawnX = mapX * CellSize;
             float spawnY = mapY * CellSize;
 
-            if (objectID == 0) // プレイヤー
-            {
-                Player player = new Player(playScene, new Vector2(spawnX, spawnY));
-                playScene.gameObjects.Add(player);
-                playScene.player = player;
-            }
-            else if (objectID == 1) // しいたけ
+            if (objectID == 1) // しいたけ
             {
                 playScene.gameObjects.Add(new Shiitake(playScene, new Vector2(spawnX, spawnY)));
             }
             else if (objectID == 3)
             {
-                DX.DrawGraphF(spawnX, spawnY, Image.upStairs, 1);
+                playScene.gameObjects.Add(new UpStairs(playScene, new Vector2(spawnX, spawnY)));
             }
-            else if (objectID == 3)
+            else if (objectID == 4)
             {
-                DX.DrawGraphF(spawnX, spawnY, Image.downStairs, 1);
+                playScene.gameObjects.Add(new DownStairs(playScene, new Vector2(spawnX, spawnY)));
+            }
+            else if (objectID == 0) // プレイヤー
+            {
+                Player player = new Player(playScene, new Vector2(spawnX, spawnY));
+                playScene.gameObjects.Add(player);
+                playScene.player = player;
             }
             // 新しい種類のオブジェクトを作ったら、ここに生成処理を追加してください
             else
