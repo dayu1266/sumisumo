@@ -38,9 +38,9 @@ namespace sumisumo
 
             imageWidth = 60;
             imageHeight = 140;
-            hitboxOffsetLeft = 20;
-            hitboxOffsetRight = 20;
-            hitboxOffsetTop = 14;
+            hitboxOffsetLeft = 17;
+            hitboxOffsetRight = 17;
+            hitboxOffsetTop = 9;
             hitboxOffsetBottom = 10;
             curMoney = 0;
 

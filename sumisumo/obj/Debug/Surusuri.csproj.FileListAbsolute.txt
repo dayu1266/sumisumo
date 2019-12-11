@@ -1,3 +1,79 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Image\test_mapchip.png
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Image\test_player_shot.png
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Image\test_shiitake.png
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Image\test_zentaman.png
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Map\stage1_object.csv
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\sumisumo.exe.config
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\sumisumo.exe
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\sumisumo.pdb
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\DxLibWDotNet.dll
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\qimoInput_d.dll
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\bin\Debug\qimoMath2D_d.dll
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\obj\Debug\sumisumo.exe
+C:\Users\kamab\Desktop\授業\後期\制作\surusuri２\sumisumo\obj\Debug\sumisumo.pdb
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\test_mapchip.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\test_player_shot.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\test_shiitake.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\test_zentaman.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Map\stage1_object.csv
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\sumisumo.exe.config
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\sumisumo.exe
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\sumisumo.pdb
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\DxLibWDotNet.dll
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoInput_d.dll
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoMath2D_d.dll
+C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
+C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\sumisumo.exe
+C:\Users\g019g1385\Desktop\suri\sumisumo\obj\Debug\sumisumo.pdb
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f73a99e4cefbb2da066705337ef67d5995e5b007
+>>>>>>> 194cdb9ca976f11f30e5326c682f2371790f602e
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background1.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\cursor.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\goMain.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\nextStage.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\player.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\retry.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\test_mapchip.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\test_player_shot.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\test_shiitake.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\test_zentaman.png
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Map\stage1_object.csv
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\sumisumo.exe.config
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\sumisumo.exe
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\sumisumo.pdb
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\DxLibWDotNet.dll
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\qimoInput_d.dll
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\qimoMath2D_d.dll
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.exe
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.pdb
+C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 194cdb9ca976f11f30e5326c682f2371790f602e
+>>>>>>> 8040614f7b453ae063be55e1d38ea30343eaa2b6
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\background1.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\cursor.png
@@ -21,6 +97,52 @@ C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
 C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
 C:\suru_suri\sumisumo\obj\Debug\sumisumo.exe
 C:\suru_suri\sumisumo\obj\Debug\sumisumo.pdb
+<<<<<<< HEAD
 C:\suru_suri\sumisumo\bin\Debug\res\Image\number.png
 C:\suru_suri\sumisumo\bin\Debug\res\Image\heart.png
 C:\suru_suri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+=======
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background1.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\cursor.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\goMain.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\nextStage.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\player.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\retry.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_mapchip.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_player_shot.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_shiitake.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_zentaman.png
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Map\stage1_object.csv
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.exe.config
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.exe
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.pdb
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\DxLibWDotNet.dll
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\qimoInput_d.dll
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\qimoMath2D_d.dll
+D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
+D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.exe
+D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.pdb
+>>>>>>> e75ab6c6277f9e6baf3dd677f78a876bd38639b2
+>>>>>>> c74a29567287f84e93a736e2dbf24a70809e61b1
+C:\surusure\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
+C:\surusure\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
+C:\surusure\sumisumo\obj\Debug\sumisumo.exe
+C:\surusure\sumisumo\obj\Debug\sumisumo.pdb
+>>>>>>> a0ac252f6faf6c90a8fd9f3345ca4c88ff85d958
+<<<<<<< HEAD
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\background.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\background1.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\cursor.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\goMain.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\nextStage.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\player.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\res\Image\retry.png
+C:\Users\g019g1385\Desktop\suri\sumisumo\bin\Debug\qimoMath2D_d.xml
+=======
+>>>>>>> f73a99e4cefbb2da066705337ef67d5995e5b007
+>>>>>>> 194cdb9ca976f11f30e5326c682f2371790f602e
+>>>>>>> 8040614f7b453ae063be55e1d38ea30343eaa2b6
