@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background.png
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\background1.png
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\bin\Debug\res\Image\cursor.png
@@ -23,56 +22,3 @@ C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surus
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.exe
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\sumisumo.pdb
 C:\Users\g019g1374\Desktop\チーム制作2\ProjectFile\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
-=======
-<<<<<<< HEAD
-C:\suru_suri\sumisumo\bin\Debug\res\Image\background.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\background1.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\cursor.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\goMain.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\nextStage.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\player.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\retry.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\test_mapchip.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\test_player_shot.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\test_shiitake.png
-C:\suru_suri\sumisumo\bin\Debug\res\Image\test_zentaman.png
-C:\suru_suri\sumisumo\bin\Debug\res\Map\stage1_object.csv
-C:\suru_suri\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
-C:\suru_suri\sumisumo\bin\Debug\sumisumo.exe.config
-C:\suru_suri\sumisumo\bin\Debug\sumisumo.exe
-C:\suru_suri\sumisumo\bin\Debug\sumisumo.pdb
-C:\suru_suri\sumisumo\bin\Debug\DxLibWDotNet.dll
-C:\suru_suri\sumisumo\bin\Debug\qimoInput_d.dll
-C:\suru_suri\sumisumo\bin\Debug\qimoMath2D_d.dll
-C:\suru_suri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
-C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
-C:\suru_suri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
-C:\suru_suri\sumisumo\obj\Debug\sumisumo.exe
-C:\suru_suri\sumisumo\obj\Debug\sumisumo.pdb
-=======
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\background1.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\cursor.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\goMain.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\nextStage.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\player.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\retry.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_mapchip.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_player_shot.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_shiitake.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\test_zentaman.png
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Map\stage1_object.csv
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Map\stage1_terrain.csv
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.exe.config
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.exe
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\sumisumo.pdb
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\DxLibWDotNet.dll
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\qimoInput_d.dll
-D:\Sourcetree\surusuri\sumisumo\bin\Debug\qimoMath2D_d.dll
-D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
-D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cache
-D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
-D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.exe
-D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.pdb
->>>>>>> e75ab6c6277f9e6baf3dd677f78a876bd38639b2
->>>>>>> c74a29567287f84e93a736e2dbf24a70809e61b1

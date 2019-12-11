@@ -10,6 +10,7 @@ namespace sumisumo
 {
     public class GameClearScene : Scene
     {
+        ResultCursor resultCursor = new ResultCursor();
         bool flag; // カーソルの位置のフラグ
         public override void Init()
         {
