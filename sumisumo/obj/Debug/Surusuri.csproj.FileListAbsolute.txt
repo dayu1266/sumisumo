@@ -30,3 +30,4 @@ D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CoreCompileInputs.cach
 D:\Sourcetree\surusuri\sumisumo\obj\Debug\Surusuri.csproj.CopyComplete
 D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.exe
 D:\Sourcetree\surusuri\sumisumo\obj\Debug\sumisumo.pdb
+D:\Sourcetree\surusuri\sumisumo\bin\Debug\res\Image\stage1_buck.png

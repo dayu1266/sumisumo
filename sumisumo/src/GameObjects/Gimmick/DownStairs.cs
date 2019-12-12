@@ -20,6 +20,7 @@ namespace sumisumo
             hitboxOffsetRight = 0;
             hitboxOffsetTop = 0;
             hitboxOffsetBottom = 0;
+
         }
 
         public override void Update()

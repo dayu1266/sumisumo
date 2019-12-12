@@ -11,7 +11,7 @@ namespace sumisumo
 {
     public class People : GameObject
     {
-        const float WalkSpeed = 3f;      // 歩きの速度
+        const float WalkSpeed = 2f;      // 歩きの速度
         const float MaxFallSpeed = 12f;  // 最大落下速度
         const int initialHp = 1;         // 一般人のHP
         const int initialAmount = 200;    // 移動量のベース

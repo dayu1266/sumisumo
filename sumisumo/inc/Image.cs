@@ -20,6 +20,7 @@ namespace sumisumo
         public static int heart;                         // ハート
         public static int downStairs;                    // 下り階段
         public static int upStairs;                      // 上り階段
+        public static int stage1_buck;                   // ステージ１の背景
 
         public static void Load()
         {
@@ -40,6 +41,8 @@ namespace sumisumo
 
             downStairs = DX.LoadGraph("res/Image/downstairs.png");
             upStairs = DX.LoadGraph("res/Image/upstairs.png");
+
+            stage1_buck = DX.LoadGraph("res/Image/stage1_buck.png");
 
         }
     }

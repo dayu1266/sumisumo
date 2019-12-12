@@ -26,6 +26,8 @@ namespace sumisumo
         // 全GameObjectを一括管理するリスト
         public List<GameObject> gameObjects = new List<GameObject>();
 
+        public List<GameObject> enemyObjects = new List<GameObject>();
+
         public State state = State.Active;// PlaySceneの状態
         int timeToGameOver = 120; // ゲームオーバーになるまでの時間（フレーム）
         public bool isGoal = false; // ゴールしたかどうか
@@ -36,8 +38,6 @@ namespace sumisumo
         {
             // インスタンス生成
             map = new Map(this, "stage1");
-            gameObjects.Add(new People(this, new Vector2(600, 400)));
-            gameObjects.Add(new Guardman(this, new Vector2(600, 650)));
             Camera.LookAt(player.pos.X, player.pos.Y);
         }
 
@@ -67,6 +67,13 @@ namespace sumisumo
                 gameObjects[i].Update();
             }
 
+            // 全オブジェクトの更新
+            int enemyObjectsCount = enemyObjects.Count; // ループ前の個数を取得しておく
+            for (int i = 0; i < enemyObjectsCount; i++)
+            {
+                enemyObjects[i].Update();
+            }
+
             // オブジェクト同士の衝突を判定
             for (int i = 0; i < gameObjects.Count; i++)
             {
@@ -93,8 +100,35 @@ namespace sumisumo
                 }
             }
 
+            // オブジェクト同士の衝突を判定
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                GameObject a = gameObjects[i];
+
+                for (int j = i; j < gameObjects.Count; j++)
+                {
+                    // オブジェクトAが死んでたらこのループは終了
+                    if (a.isDead) break;
+
+                    GameObject b = enemyObjects[j];
+
+                    // オブジェクトBが死んでたらスキップ
+                    if (b.isDead) continue;
+
+                    // オブジェクトAとBが重なっているか？
+                    if (Math2D.RectRectIntersect(
+                        a.GetLeft(), a.GetTop(), a.GetRight(), a.GetBottom(),
+                        b.GetLeft(), b.GetTop(), b.GetRight(), b.GetBottom()))
+                    {
+                        a.OnView(b);
+                        b.OnCollision(a);
+                    }
+                }
+            }
+
             // 不要となったオブジェクトを除去する
             gameObjects.RemoveAll(go => go.isDead);
+            enemyObjects.RemoveAll(go => go.isDead);
 
             Camera.LookAt(player.pos.X, player.pos.Y);
 
@@ -141,6 +175,12 @@ namespace sumisumo
                 go.Draw();
             }
 
+            // 全オブジェクトの描画
+            foreach (GameObject go in enemyObjects)
+            {
+                go.Draw();
+            }
+
             // プレイヤーの所持金表示
             string money = player.curMoney.ToString("000000");
             for (int i = 0; i < money.Length; i++)
@@ -177,7 +217,17 @@ namespace sumisumo
             {
                 go.DrawView();
             }
-            #endif
+            // 当たり判定のデバッグ表示
+            foreach (GameObject go in enemyObjects)
+            {
+                go.DrawHitBox();
+            }
+            // 視野のデバッグ表示
+            foreach (GameObject go in enemyObjects)
+            {
+                go.DrawView();
+            }
+#endif
         }
     }
 }

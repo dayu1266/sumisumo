@@ -38,7 +38,7 @@ namespace sumisumo
             hitboxOffsetLeft = 17;
             hitboxOffsetRight = 17;
             hitboxOffsetTop = 9;
-            hitboxOffsetBottom = 22;
+            hitboxOffsetBottom = 9;
 
             viewTop = -50;
             viewBottom = 22;
@@ -63,6 +63,9 @@ namespace sumisumo
                 // 初期値代入
                 Amount = initialAmount;
                 dontMoveFream = initialdontMoveFream;
+
+                //32 * 3;
+                //32 *78;
 
                 // ランダムで移動方向を決定
                 int tmp = randMove;

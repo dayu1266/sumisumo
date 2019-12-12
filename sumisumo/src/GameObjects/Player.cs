@@ -17,6 +17,7 @@ namespace sumisumo
         const float WalkSpeed = 6f;   // 歩きの速度
         const float Gravity = 0.6f; // 重力
         const float MaxFallSpeed = 12f;  // 最大落下速度
+        const int initSurinukeLock = 90;  // 最大落下速度
 
         const int initialHp = 3;
 
@@ -24,12 +25,16 @@ namespace sumisumo
         State state = State.Walk;        // 現在の状態
         Direction direction = Direction.Right; // 向いている方向
         public int curMoney;                // 所持金
+        int surinukeLock;
+        Direction tmp = Direction.Right;
 
         int floor = 1;      // 今いる階層
         int floorMax = 3;   // 最上層
         int fllorMin = 1;   // 最下層
 
         public int hp = 3;
+
+        bool PeopleSurinuke = false;
         
         public Player(PlayScene playScene, Vector2 pos) : base(playScene)
         {
@@ -42,9 +47,16 @@ namespace sumisumo
             hitboxOffsetRight = 17;
             hitboxOffsetTop = 9;
             hitboxOffsetBottom = 10;
+
+            viewTop = -50;
+            viewBottom = 22;
+            viewLeft = 197;
+            viewRight = 17;
+
             curMoney = 0;
 
             hp = initialHp;
+            surinukeLock = initSurinukeLock;
         }
 
         public override void Update()
@@ -60,6 +72,15 @@ namespace sumisumo
             MoveX();
             // 次に縦に動かす
             MoveY();
+
+            surinukeLock--;
+
+            
+            if(direction != tmp)
+            {
+                ViewDirectionChange();
+                tmp = direction;
+            }
         }
 
         // 入力を受けての処理
@@ -84,19 +105,22 @@ namespace sumisumo
                 velocity.X = 0;
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_UP) && floor < 3)
+            if (Input.GetButtonDown(DX.PAD_INPUT_UP) && floor < 3 && surinukeLock <= 0)
             {
                 FloorUp();
+                surinukeLock = initSurinukeLock;
             }
 
-            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN) && floor > 1)
+            if (Input.GetButtonDown(DX.PAD_INPUT_DOWN) && floor > 1 && surinukeLock <= 0)
             {
                 FloorDown();
+                surinukeLock = initSurinukeLock;
             }
-            //所持金テスト用
-            if (Input.GetButton(DX.PAD_INPUT_1))
+
+            if (Input.GetButtonDown(DX.PAD_INPUT_1) && surinukeLock <= 0)
             {
-                curMoney += 10;
+                frontSurinuke();
+                surinukeLock = initSurinukeLock;
             }
         }
 
@@ -176,6 +200,22 @@ namespace sumisumo
             }
         }
 
+        void frontSurinuke()
+        {
+            if(direction == Direction.Right)
+            {
+                pos.X += 180;
+            }
+            if (direction == Direction.Left)
+            {
+                pos.X -= 180;
+            }
+            if(PeopleSurinuke == true)
+            {
+                curMoney += 1500;
+            }
+        }
+
         public override void Draw()
         {
             // 左右反転するか？（左向きなら反転する）
@@ -203,9 +243,9 @@ namespace sumisumo
 
         public override void OnCollision(GameObject other)
         {
-            if (other is Shiitake) // しいたけにぶつかったときの処理
+            if(other is Guardman && playScene.state == PlayScene.State.OnAlert )
             {
-                Die(); // 死亡処理
+                hp--;
             }
             //else if (other is Goal) //ゴールにぶつかったときの処理
             //{
@@ -213,9 +253,12 @@ namespace sumisumo
             //}
         }
 
-
         public override void OnView(GameObject other)
         {
+            if (other is People)
+            {
+                PeopleSurinuke = true;
+            }
         }
 
         // 死亡処理

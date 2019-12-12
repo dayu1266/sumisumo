@@ -123,6 +123,14 @@ namespace sumisumo
             {
                 playScene.gameObjects.Add(new DownStairs(playScene, new Vector2(spawnX, spawnY)));
             }
+            else if (objectID == 16)
+            {
+                playScene.enemyObjects.Add(new People(playScene, new Vector2(spawnX, spawnY)));
+            }
+            else if (objectID == 17)
+            {
+                playScene.enemyObjects.Add(new Guardman(playScene, new Vector2(spawnX, spawnY)));
+            }
             // 新しい種類のオブジェクトを作ったら、ここに生成処理を追加してください
             else
             {
@@ -133,6 +141,9 @@ namespace sumisumo
         // 地形を描画する
         public void DrawTerrain()
         {
+            // ステージ背景の描画
+            Camera.DrawGraph(96, 320, Image.stage1_buck);
+
             // 画面内のマップのみ描画するようにする
             int left = (int)(Camera.cameraPos.X / CellSize);
             int top = (int)(Camera.cameraPos.Y / CellSize);
