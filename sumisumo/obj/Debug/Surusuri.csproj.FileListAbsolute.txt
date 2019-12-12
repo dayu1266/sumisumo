@@ -32,3 +32,4 @@ C:\suru_suri\sumisumo\obj\Debug\sumisumo.exe
 C:\suru_suri\sumisumo\obj\Debug\sumisumo.pdb
 C:\suru_suri\sumisumo\obj\Debug\Surusuri.csprojAssemblyReference.cache
 C:\suru_suri\sumisumo\bin\Debug\res\Image\yen.png
+C:\suru_suri\sumisumo\bin\Debug\res\Image\curmoney.png

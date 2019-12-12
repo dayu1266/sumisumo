@@ -181,6 +181,7 @@ namespace sumisumo
                 go.Draw();
             }
 
+            DX.DrawGraph(1020, 16, Image.curMoney, 1);
             // プレイヤーの所持金表示
             string money = player.curMoney.ToString("000000");
             for (int i = 0; i < money.Length; i++)

@@ -22,6 +22,7 @@ namespace sumisumo
         public static int upStairs;                      // 上り階段
         public static int stage1_buck;                   // ステージ１の背景
         public static int yen;                           // 円
+        public static int curMoney;                      
 
         public static void Load()
         {
@@ -43,6 +44,7 @@ namespace sumisumo
             upStairs = DX.LoadGraph("res/Image/upstairs.png");
             stage1_buck = DX.LoadGraph("res/Image/stage1_buck.png");
             yen = DX.LoadGraph("res/Image/yen.png");
+            curMoney = DX.LoadGraph("res/Image/curmoney.png");
 
         }
     }
