@@ -63,22 +63,8 @@ namespace sumisumo
         {
             if (playScene.state == PlayScene.State.OnAlert && findPlayer)
             {
-<<<<<<< HEAD
-                // 初期値代入
-                Amount = initialAmount;
-                dontMoveFream = initialdontMoveFream;
-
-                //32 * 3;
-                //32 *78;
-
-                // ランダムで移動方向を決定
-                int tmp = randMove;
-                randMove = QimOLib.Random.Range(1, 3);
-                if (changecount == 0)
-=======
                 if (Math.Pow(playScene.player.pos.X - pos.X, 2) < 8) velocity.X = 0;
                 else if (playScene.player.pos.X > pos.X)
->>>>>>> af7cb44a648a126198bb4c4713de1e938fc351bf
                 {
                     float prePosX = velocity.X; // 1フレーム前の速度を保存
                     velocity.X = RunSpeed;

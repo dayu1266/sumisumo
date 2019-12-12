@@ -120,7 +120,7 @@ namespace sumisumo
                         a.GetLeft(), a.GetTop(), a.GetRight(), a.GetBottom(),
                         b.GetLeft(), b.GetTop(), b.GetRight(), b.GetBottom()))
                     {
-                        a.OnView(b);
+                        a.OnCollision(b);
                         b.OnCollision(a);
                     }
                 }
@@ -187,6 +187,7 @@ namespace sumisumo
             {
                 DX.DrawRotaGraph(1140 + (16 * i), 32, 1.0f, 0, Image.number[money[i] - '0'], 1);
             }
+            DX.DrawGraph(1230, 16, Image.yen, 1);
 
             //DX.DrawString(1060, 26, "/", DX.GetColor(0, 0, 0));
             //for (int i = 0; i < targetAmout.ToString().Length; i++)

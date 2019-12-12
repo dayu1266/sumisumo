@@ -21,6 +21,7 @@ namespace sumisumo
         public static int downStairs;                    // 下り階段
         public static int upStairs;                      // 上り階段
         public static int stage1_buck;                   // ステージ１の背景
+        public static int yen;                           // 円
 
         public static void Load()
         {
@@ -38,11 +39,10 @@ namespace sumisumo
             cursor = DX.LoadGraph("res/Image/cursor.png");
             DX.LoadDivGraph("res/Image/suuji16x32_02.png", number.Length, 12, 1, 16, 32, number);
             heart = DX.LoadGraph("res/Image/heart.png");
-
             downStairs = DX.LoadGraph("res/Image/downstairs.png");
             upStairs = DX.LoadGraph("res/Image/upstairs.png");
-
             stage1_buck = DX.LoadGraph("res/Image/stage1_buck.png");
+            yen = DX.LoadGraph("res/Image/yen.png");
 
         }
     }
