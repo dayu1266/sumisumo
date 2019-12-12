@@ -17,12 +17,16 @@ namespace sumisumo
         const int initialAmount = 200;    // 移動量のベース
         const int initialdontMoveFream = 3 * 60;    // 停止フレーム
         const int View = 130;            // 視野
+        const int turnInterval = 90;
 
         float Amount;
         float dontMoveFream;
+        float turnFream;
         public int hp;
         int randMove;
         int changecount;
+        int turnCounter;
+        int turn = 0;
 
         Vector2 velocity;        // 移動速度
         Direction MoveDirection; // 移動方向
@@ -48,6 +52,7 @@ namespace sumisumo
             hp = initialHp;
             Amount = initialAmount;
             dontMoveFream = 0;
+            turnFream = 0;
         }
 
         public override void Update()
@@ -56,53 +61,63 @@ namespace sumisumo
             MoveX();
             // 次に縦に動かす
             MoveY();
+
+            if (playScene.state == PlayScene.State.OnAlert) turnFream++;
         }
 
         void MoveX()
         {
-            if (dontMoveFream <= 0)
+            if (turnFream > turnInterval)
             {
-                // 初期値代入
-                Amount = initialAmount;
-                dontMoveFream = initialdontMoveFream;
-
-                // ランダムで移動方向を決定
-                int tmp = randMove;
-                randMove = QimOLib.Random.Range(1, 3);
-                if (changecount == 0)
-                {
-                    randMove = 2;
-                }
-                if(tmp != randMove && changecount != 0)
-                {
-                    ViewDirectionChange();
-                }
-
-                // 移動量を決定
-                int randAmount = QimOLib.Random.Range(1, 4);
-                Amount = initialAmount * randAmount;
-            }
-
-            changecount++;
-
-            // Amount が0以上なら動く
-            if (Amount > 0)
-            {
-                velocity.X = WalkSpeed;
-                Amount -= velocity.X;
-                if (randMove == 1)
-                {
-                    velocity.X *= -1;
-                }
+                TurnAround(); 
             }
             else
             {
-                velocity.X = 0;
-                dontMoveFream--;
-            }
+                if (dontMoveFream <= 0)
+                {
+                    // 初期値代入
+                    Amount = initialAmount;
+                    dontMoveFream = initialdontMoveFream;
 
-            // 横に移動する
-            pos.X += velocity.X;
+                    // ランダムで移動方向を決定
+                    int tmp = randMove;
+                    randMove = QimOLib.Random.Range(1, 3);
+                    if (changecount == 0)
+                    {
+                        randMove = 2;
+                    }
+                    if (tmp != randMove && changecount != 0)
+                    {
+                        ViewDirectionChange();
+                    }
+
+                    // 移動量を決定
+                    int randAmount = QimOLib.Random.Range(1, 4);
+                    Amount = initialAmount * randAmount;
+                }
+
+                changecount++;
+
+                // Amount が0以上なら動く
+                if (Amount > 0)
+                {
+                    velocity.X = WalkSpeed;
+                    Amount -= velocity.X;
+                    if (randMove == 1)
+                    {
+                        velocity.X *= -1;
+                    }
+                }
+                else
+                {
+                    velocity.X = 0;
+                    dontMoveFream--;
+                }
+
+                // 横に移動する
+                pos.X += velocity.X;
+            }
+           
 
             // 当たり判定の四隅の座標を取得
             float left = GetLeft();
@@ -169,12 +184,32 @@ namespace sumisumo
             }
         }
 
+        void TurnAround()
+        {
+            turnCounter++;
+            if (turnCounter > 20)
+            {
+                ViewDirectionChange();
+                turn++;
+                turnCounter = 0;
+            }
+            if (turn >= 2)
+            {
+                turn = 0;
+                turnFream = 0;
+            }
+        }
+
         public override void OnCollision(GameObject other)
         {
         }
 
         public override void OnView(GameObject other)
         {
+            if (other is Player)
+            {
+
+            }
         }
 
         public override void Draw()

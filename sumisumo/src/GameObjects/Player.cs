@@ -96,7 +96,7 @@ namespace sumisumo
             //所持金テスト用
             if (Input.GetButton(DX.PAD_INPUT_1))
             {
-                curMoney += 10;
+                curMoney += 1000;
             }
         }
 
