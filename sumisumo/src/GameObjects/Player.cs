@@ -119,8 +119,12 @@ namespace sumisumo
 
             if (Input.GetButtonDown(DX.PAD_INPUT_1) && surinukeLock <= 0)
             {
+<<<<<<< HEAD
                 frontSurinuke();
                 surinukeLock = initSurinukeLock;
+=======
+                curMoney += 1000;
+>>>>>>> af7cb44a648a126198bb4c4713de1e938fc351bf
             }
         }
 

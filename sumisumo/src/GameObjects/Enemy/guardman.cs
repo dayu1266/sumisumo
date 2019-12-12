@@ -12,6 +12,7 @@ namespace sumisumo
     public class Guardman : GameObject
     {
         const float WalkSpeed = 3f;      // 歩きの速度
+        const float RunSpeed = 9f;
         const float MaxFallSpeed = 12f;  // 最大落下速度
         const int initialHp = 1;         // 一般人のHP
         const int initialAmount = 200;   // 移動量のベース
@@ -23,6 +24,7 @@ namespace sumisumo
         public int hp;
         int randMove;
         int changecount;
+        bool findPlayer; // プレイヤーを見つけたかどうかのフラグ
 
         Vector2 velocity;        // 移動速度
         Direction MoveDirection; // 移動方向
@@ -48,6 +50,7 @@ namespace sumisumo
             hp = initialHp;
             Amount = initialAmount;
             dontMoveFream = 0;
+            findPlayer = false;
         }
 
         public override void Update()
@@ -58,8 +61,9 @@ namespace sumisumo
 
         void MoveX()
         {
-            if (dontMoveFream <= 0)
+            if (playScene.state == PlayScene.State.OnAlert && findPlayer)
             {
+<<<<<<< HEAD
                 // 初期値代入
                 Amount = initialAmount;
                 dontMoveFream = initialdontMoveFream;
@@ -71,35 +75,67 @@ namespace sumisumo
                 int tmp = randMove;
                 randMove = QimOLib.Random.Range(1, 3);
                 if (changecount == 0)
+=======
+                if (Math.Pow(playScene.player.pos.X - pos.X, 2) < 8) velocity.X = 0;
+                else if (playScene.player.pos.X > pos.X)
+>>>>>>> af7cb44a648a126198bb4c4713de1e938fc351bf
                 {
-                    randMove = 2;
+                    float prePosX = velocity.X; // 1フレーム前の速度を保存
+                    velocity.X = RunSpeed;
+                    // 1フレーム前の速度より今の速度がのほうが速い
+                    // つまり振り向いた
+                    if (prePosX < velocity.X) ViewDirectionChange();
                 }
-                if (tmp != randMove && changecount != 0)
+                else
                 {
-                    ViewDirectionChange();
-                }
-
-                // 移動量を決定
-                int randAmount = QimOLib.Random.Range(1, 4);
-                Amount = initialAmount * randAmount;
-            }
-
-            changecount++;
-
-            // Amount が0以上なら動く
-            if (Amount > 0)
-            {
-                velocity.X = WalkSpeed;
-                Amount -= velocity.X;
-                if (randMove == 1)
-                {
-                    velocity.X *= -1;
+                    float prePosX = velocity.X;
+                    velocity.X = -RunSpeed;
+                    if (prePosX > velocity.X) ViewDirectionChange();
                 }
             }
+
             else
             {
-                velocity.X = 0;
-                dontMoveFream--;
+                if (dontMoveFream <= 0)
+                {
+                    // 初期値代入
+                    Amount = initialAmount;
+                    dontMoveFream = initialdontMoveFream;
+
+                    // ランダムで移動方向を決定
+                    int tmp = randMove;
+                    randMove = QimOLib.Random.Range(1, 3);
+                    if (changecount == 0)
+                    {
+                        randMove = 2;
+                    }
+                    if (tmp != randMove && changecount != 0)
+                    {
+                        ViewDirectionChange();
+                    }
+
+                    // 移動量を決定
+                    int randAmount = QimOLib.Random.Range(1, 4);
+                    Amount = initialAmount * randAmount;
+                }
+
+                changecount++;
+
+                // Amount が0以上なら動く
+                if (Amount > 0)
+                {
+                    velocity.X = WalkSpeed;
+                    Amount -= velocity.X;
+                    if (randMove == 1)
+                    {
+                        velocity.X *= -1;
+                    }
+                }
+                else
+                {
+                    velocity.X = 0;
+                    dontMoveFream--;
+                }
             }
 
             // 横に移動する
@@ -176,6 +212,19 @@ namespace sumisumo
 
         public override void OnView(GameObject other)
         {
+            if (other is Player)
+            {
+                if (playScene.state == PlayScene.State.Active)
+                {
+                    // プレイヤーが掏り状態だったら、警戒モードにする
+                }
+                if (playScene.state == PlayScene.State.OnAlert)
+                {
+                    findPlayer = true;
+                    Sound.SePlay(Sound.se_alarm);
+                }
+            }
+
         }
 
         public void Die()
